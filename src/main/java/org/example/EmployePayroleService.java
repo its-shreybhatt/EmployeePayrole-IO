@@ -4,6 +4,7 @@ import java.util.ArrayList;
 import java.util.Scanner;
 
 public class EmployePayroleService {
+
     public static void main(String[] args) {
         ArrayList<EmployeePayroleData> employeePayroleList = new ArrayList<>();
         EmployePayroleService employePayroleService = new EmployePayroleService();
@@ -25,4 +26,5 @@ public class EmployePayroleService {
     public void writeEmployeeData(ArrayList<EmployeePayroleData> employeePayroleList) {
         System.out.println("Data is = " + employeePayroleList);
     }
+
 }

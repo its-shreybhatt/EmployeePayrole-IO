@@ -20,5 +20,4 @@ public class EmployeePayroleData {
                 ", salary=" + salary +
                 '}';
     }
-
 }
