@@ -1,0 +1,3 @@
+EmployeePayroleData{id=1, name='Shrey', salary=25000.0}
+EmployeePayroleData{id=2, name='Kartikeya', salary=28000.0}
+EmployeePayroleData{id=3, name='Akshay', salary=27500.5}
