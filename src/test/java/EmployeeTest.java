@@ -66,5 +66,7 @@ public class EmployeeTest {
         EmployePayroleService object = new EmployePayroleService(Arrays.asList(arayOfEmps));
         object.writeEmployeePayrollData(FILE_IO);
         object.printData(FILE_IO);
+        long entries = object.countEntries(FILE_IO);
+        Assert.assertEquals(3,entries);
     }
 }
