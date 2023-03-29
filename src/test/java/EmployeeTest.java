@@ -69,4 +69,11 @@ public class EmployeeTest {
         long entries = object.countEntries(FILE_IO);
         Assert.assertEquals(3,entries);
     }
+
+    @Test
+    public void givenFile_WhenReadingFromFile_ShouldMatchCount() {
+        EmployePayroleService object = new EmployePayroleService();
+        long entries = object.readEmployeePayroll(FILE_IO);
+        Assert.assertEquals(3,entries);
+    }
 }

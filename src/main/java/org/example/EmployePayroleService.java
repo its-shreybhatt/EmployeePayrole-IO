@@ -10,7 +10,8 @@ public class EmployePayroleService {
 
     private static List<EmployeePayroleData> employeePayrollList;
 
-    public EmployePayroleService() {}
+    public EmployePayroleService() {
+    }
 
 
     public EmployePayroleService(List<EmployeePayroleData> employeePayrollList) {
@@ -21,12 +22,12 @@ public class EmployePayroleService {
     public static void main(String[] args) {
         employeePayrollList = new ArrayList<>();
         EmployePayroleService employePayroleService = new EmployePayroleService();
-        Scanner input = new Scanner(System.in);
-        employePayroleService.readEmployeePayrollData(input);
+        employePayroleService.readEmployeePayrollData();
         employePayroleService.writeEmployeePayrollData(IOService.CONSOLE_IO);
     }
 
-    public void readEmployeePayrollData(Scanner input) {
+    public void readEmployeePayrollData() {
+        Scanner input = new Scanner(System.in);
         System.out.println("Enter Employee Id ");
         int id = input.nextInt();
         System.out.println("Enter Employee Name");
@@ -51,6 +52,12 @@ public class EmployePayroleService {
     public long countEntries(IOService ioService) {
         if (ioService.equals(IOService.FILE_IO))
             return new EmployeePayrollFileIO().countEntries();
+        return 0;
+    }
+
+    public long readEmployeePayroll(IOService ioService) {
+        if (ioService.equals(IOService.FILE_IO))
+            return new EmployeePayrollFileIO().readData();
         return 0;
     }
 }

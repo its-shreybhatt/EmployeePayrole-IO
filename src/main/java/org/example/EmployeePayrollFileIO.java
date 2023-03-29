@@ -4,6 +4,7 @@ import java.io.File;
 import java.io.IOException;
 import java.nio.file.Files;
 import java.nio.file.Paths;
+import java.util.ArrayList;
 import java.util.List;
 
 public class EmployeePayrollFileIO {
@@ -38,5 +39,16 @@ public class EmployeePayrollFileIO {
             e.printStackTrace();
         }
         return entries;
+    }
+
+    public static long readData() {
+        List<EmployeePayroleData> employeePayrollList = new ArrayList<>();
+        long count = 0;
+        try {
+            count = Files.lines(new File(PAYROLL_FILE_NAME).toPath()).count();
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+        return count;
     }
 }
