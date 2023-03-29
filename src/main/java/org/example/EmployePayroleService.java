@@ -6,7 +6,6 @@ import java.util.Scanner;
 
 public class EmployePayroleService {
 
-
     public enum IOService {CONSOLE_IO, FILE_IO}
 
     private static List<EmployeePayroleData> employeePayrollList;
@@ -42,5 +41,10 @@ public class EmployePayroleService {
             System.out.println("Writting to Console \n" + employeePayrollList);
         else if (ioService.equals(IOService.FILE_IO))
             new EmployeePayrollFileIO().writeData(employeePayrollList);
+    }
+
+    public void printData(IOService ioService) {
+        if (ioService.equals(IOService.FILE_IO))
+            new EmployeePayrollFileIO().printData();
     }
 }

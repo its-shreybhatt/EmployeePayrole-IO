@@ -65,5 +65,6 @@ public class EmployeeTest {
                 new EmployeePayroleData(3, "Akshay", 27500.5)};
         EmployePayroleService object = new EmployePayroleService(Arrays.asList(arayOfEmps));
         object.writeEmployeePayrollData(FILE_IO);
+        object.printData(FILE_IO);
     }
 }
